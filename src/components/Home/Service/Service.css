@@ -1,0 +1,9 @@
+.card-focus{
+    cursor: pointer;
+    
+}
+.card-focus:hover {
+    background-color: rgb(245, 243, 237);
+    
+  }
+  
