@@ -10,7 +10,7 @@ const { register, handleSubmit, watch, errors } = useForm();
     console.log('form submitted', data)
     //const selectedService = {data}
     //setOrder(orderDetails) 
-    fetch('http://localhost:9000/addOrder', {
+    fetch('https://sleepy-ocean-40768.herokuapp.com/addOrder', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)

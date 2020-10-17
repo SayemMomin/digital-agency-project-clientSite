@@ -17,7 +17,7 @@ const Service = ({service}) => {
             <div className="card-body ">
                 {
                     service.image ? <img style={{width: "60px"}} className="img-fluid" src={`data:image/png;base64,${service.image.img}`} alt=""/> 
-                    : <img style={{width: "60px"}} className="img-fluid" src={`http://localhost:9000/${service.img}`} alt=""/> 
+                    : <img style={{width: "60px"}} className="img-fluid" src={`https://sleepy-ocean-40768.herokuapp.com/${service.img}`} alt=""/> 
                 } <br/>
                 <h5 className="card-title">{service.title} </h5>
                 <p className="card-text">{service.description} </p>

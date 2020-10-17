@@ -5,7 +5,7 @@ import reviewsData from '../../../../FackData/ReviewsData/ReviewsData';
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:9000/reviews' 
+        fetch('https://sleepy-ocean-40768.herokuapp.com/reviews' 
         )
         .then(res => res.json())
         .then(data => {

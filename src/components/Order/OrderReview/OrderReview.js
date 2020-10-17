@@ -10,7 +10,7 @@ const OrderReview = () => {
     console.log(data)
     
     const reviewData = {...userLoggedIn, data}
-    fetch('http://localhost:9000/addReview', {
+    fetch('https://sleepy-ocean-40768.herokuapp.com/addReview', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(reviewData)

@@ -10,7 +10,7 @@ const ServiceList = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:9000/myServiceList?email='+ loggedInUser.email, 
+        fetch('https://sleepy-ocean-40768.herokuapp.com/myServiceList?email='+ loggedInUser.email, 
         )
         .then(res => res.json())
         .then(data => {

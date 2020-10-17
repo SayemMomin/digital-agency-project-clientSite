@@ -4,7 +4,7 @@ import AllServiceListShow from '../AllServiceListShow/AllServiceListShow';
 const AllServiceList = () => {
     const [allServiceList, setAllServiceList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:9000/allOrderServiceList' 
+        fetch('https://sleepy-ocean-40768.herokuapp.com/allOrderServiceList' 
         )
         .then(res => res.json())
         .then(data => {
