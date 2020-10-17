@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 
 
 
+
 const Home = () => {
     return (
         <div className="container">
@@ -17,6 +18,7 @@ const Home = () => {
           <Portfolio></Portfolio>         
           <Reviews></Reviews>
           <Footer></Footer>
+          
         </div>
     );
 };

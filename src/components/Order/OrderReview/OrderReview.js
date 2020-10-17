@@ -21,19 +21,19 @@ const OrderReview = () => {
     
   };
     return (
-        <div className="row container d-flex justify-content-center">
-            <div className="col-sm-3">
+        <section className="row container d-flex justify-content-center">
+            <section className="col-sm-3">
                 <SidebarCommon></SidebarCommon>
-            </div>
-            <div className="col-sm-6">
+            </section>
+            <section className="col-sm-6">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input name="name" className="form-control m-2" placeholder="Your Name" type="text" ref={register({ required: true })}/>
               <input name="designation" className="form-control m-2" placeholder="Your designation" id="exampleFormControlSelect2" type="text" ref={register({ required: true })}/>
               <textarea name="review" className="form-control m-2" placeholder="Write your review" id="exampleFormControlTextarea1" style={{height: '200px'}} rows="3" ref={register({ required: true })}></textarea>
               <input className="form-control m-2" type="submit" value="Submit Your Review"/>
               </form>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 };
 

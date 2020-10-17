@@ -12,7 +12,7 @@ const Service = ({service}) => {
      }
      
     return (
-        <div onClick={orderHandle} className="col-md-6 col-lg-4 card-focus">
+        <main onClick={orderHandle} className="d-flex justify-content-center col-md-6 col-lg-4 card-focus">
             <div className="" style={{width: '22rem'}}>
             <div className="card-body ">
                 {
@@ -23,7 +23,7 @@ const Service = ({service}) => {
                 <p className="card-text">{service.description} </p>
             </div>
             </div>
-        </div>
+        </main>
     );
 };
 

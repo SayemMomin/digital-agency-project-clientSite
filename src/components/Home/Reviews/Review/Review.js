@@ -5,7 +5,7 @@ const Review = ({review}) => {
     const{data} = review
     console.log(data);
     return (
-        <div className="col-md-6 col-lg-4">
+        <div className=" d-flex justify-content-center col-md-6 col-lg-4">
             <div className="" style={{width: '22rem'}}>
             <div className="card m-2">
             <div className="card-body">

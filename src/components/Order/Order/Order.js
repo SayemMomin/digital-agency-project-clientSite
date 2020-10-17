@@ -3,9 +3,6 @@ import OrderForm from '../OrderForm/OrderForm';
 import SidebarCommon from '../../SidebarCommon/SidebarCommon';
 
 
-
-
-
 const Order = () => {
     return (
         <div className="row container d-flex justify-content-center">

@@ -5,7 +5,7 @@ const ServiceListShow = ({myServiceList}) => {
     
     return (
         <div>
-            <div className="col-md-6 col-lg-4 text-white" >
+            <section className="col-md-6 col-lg-4 text-white" >
                 <div className="card m-2" style={{width: '18rem'}}>
                 <div className="card-body bg-secondary m-1">
                 <h5 className="card-title">Project Name: {myServiceList.project} </h5>
@@ -13,7 +13,7 @@ const ServiceListShow = ({myServiceList}) => {
                 <p className="card-text">Price: ${myServiceList.price} </p>
                 </div>
                 </div>
-            </div>    
+            </section>    
         </div>
         
     );

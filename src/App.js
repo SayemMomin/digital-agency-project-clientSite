@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Login from './components/Login/Login/Login';
 import Order from './components/Order/Order/Order';
@@ -38,24 +37,24 @@ function App() {
           <PrivateRoute exact path="/order">
            <Order></Order>
         </PrivateRoute>
-        <Route exact path="/order/reviewSubmit">
+        <PrivateRoute exact path="/order/reviewSubmit">
             <OrderReview></OrderReview>
-        </Route>
-        <Route exact path="/order/myServiceList">
+        </PrivateRoute>
+        <PrivateRoute exact path="/order/myServiceList">
             <ServiceList></ServiceList>
-          </Route>
-        <Route exact path="/allServiceList">
+          </PrivateRoute>
+        <PrivateRoute exact path="/allServiceList">
            <AllServiceList></AllServiceList>
-        </Route>
-        <Route exact path="/admin">
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin">
            <Admin></Admin>
-        </Route>
-        <Route exact path="/admin/addService">
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/addService">
            <AddService></AddService>
-        </Route>
-        <Route exact path="/admin/makeAdmin">
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/makeAdmin">
            <MakeAdmin></MakeAdmin>
-        </Route>
+        </PrivateRoute>
       </Switch>
      </Router>
       

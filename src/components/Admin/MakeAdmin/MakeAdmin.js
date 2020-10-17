@@ -17,15 +17,12 @@ const MakeAdmin = () => {
             <div className="col-sm-3">
                 <SidebarCommon></SidebarCommon>
             </div>
-            <div className="col-sm-6">
-            
+            <section className="col-sm-6">          
             <form onSubmit={handleSubmit(onSubmit)}>
-             <input name="email" className="form-control m-2" placeholder="Email" type="email" ref={register({ required: true })}/>
-              
-              <input className="form-control m-2" type="submit" value="Make a Admin"/>
-            </form>
-            
-            </div>
+                <input name="email" className="form-control m-2" placeholder="Email" type="email" ref={register({ required: true })}/>             
+                <input className="form-control m-2" type="submit" value="Make a Admin"/>
+            </form>          
+            </section>
         </div>
     );
 };
