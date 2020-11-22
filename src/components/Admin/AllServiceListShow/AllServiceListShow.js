@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const AllServiceListShow = ({allServiceList}) => {
     const [status, setStatus] = useState("");
     const [loding, setLoding] = useState(false);
-    const [color, setColor] = useState("red");
     const [allServiceListStatus, setAllServiceListStatus] = useState([])
     const handleChange = (event, id) => {
 
