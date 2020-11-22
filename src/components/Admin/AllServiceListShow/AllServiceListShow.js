@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AllServiceListShow = ({allServiceList}) => {
+    const [status, setStatus] = useState("");
+    const [loding, setLoding] = useState(false);
+    const [color, setColor] = useState("red");
+    const [allServiceListStatus, setAllServiceListStatus] = useState([])
+    const handleChange = (event, id) => {
+
+        setAllServiceListStatus([])
+
+        fetch(`https://sleepy-ocean-40768.herokuapp.com/updateOrderStatus/${id}`, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ status: event.target.value })
+
+        }).then(res => {
+            setLoding(loding)
+
+        })
+            .catch(err => {
+                console.log(err);
+            })
+    }
   
     return (
         <section>
@@ -26,18 +49,27 @@ const AllServiceListShow = ({allServiceList}) => {
                         <td>{serviceList.project}</td>
                         <td>{serviceList.details}</td>
                         <td>
-                        <div className="d-flex">
-                        <div className="dropdown mr-1">
-                            <button type="button" className="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-                            Position
-                            </button>
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <p className="dropdown-item text-danger" style={{cursor: 'pointer'}}>Pending</p>
-                            <p className="dropdown-item text-warning" style={{cursor: 'pointer'}} >On Going</p>
-                            <p className="dropdown-item text-success" style={{cursor: 'pointer'}} >Done</p>
-                            </div>
-                        </div>
-                        </div>
+                        {
+                                allServiceListStatus.status == "On Going" ? (
+                                <select name="status" id="status" style={{ color: 'yellow',border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                <option value="pending">pending</option>
+                                <option value="Done">Done</option>
+                                <option value="On Going">On Going</option>
+                                </select>
+                                ) : (
+                                    allServiceListStatus.status == "Done" ? (
+                                <select name="status" id="status" style={{color: `green`,border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                <option value="pending">pending</option>
+                                <option value="Done">Done</option>
+                                <option value="On Going">On Going</option>
+                                </select>
+                                ) : ( <select name="status" id="status" style={{ color: 'red',border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                <option value="pending">pending</option>
+                                <option value="Done">Done</option>
+                                <option value="On Going">On Going</option>
+                                </select>)
+                                )
+                            }   
                         </td>
                         
                     </tr>

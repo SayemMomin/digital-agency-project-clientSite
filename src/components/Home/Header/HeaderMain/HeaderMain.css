@@ -1,3 +1,18 @@
 .header-bg{
-    background-color: #FBD062;
+    position:relative;
+    background :#FBD062;
+    background-size: cover;
+}
+header{
+    height:435px;
+}
+
+header::after{
+    height:70px;
+    content:' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    background: linear-gradient(to right bottom,#FBD062 50%,white 50%);
 }

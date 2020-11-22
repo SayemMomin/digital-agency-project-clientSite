@@ -19,7 +19,7 @@ const ServiceList = () => {
         })
     }, [])
     return (
-        <div className="row container d-flex justify-content-center">
+        <div className="row container d-flex justify-content-center mt-2">
             <div className="col-sm-3">
                 <SidebarCommon></SidebarCommon>
             </div>

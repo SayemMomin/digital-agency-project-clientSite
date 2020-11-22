@@ -21,11 +21,11 @@
     "react-hook-form": "^6.9.2",
     "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.0",
     "react-simple-animate": "^3.3.10",
     "react-spring": "^8.0.27",
     "react-spring-3d-carousel": "^1.2.0",
-    "resolve-url-loader": "^3.1.1"
+    "resolve-url-loader": "^3.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -57,13 +57,5 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SayemMomin/digital-agency-project-clientSite.git"
-  },
-  "bugs": {
-    "url": "https://github.com/SayemMomin/digital-agency-project-clientSite/issues"
-  },
-  "homepage": "https://github.com/SayemMomin/digital-agency-project-clientSite#readme"
+  "license": "ISC"
 }
