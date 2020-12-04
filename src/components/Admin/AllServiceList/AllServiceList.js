@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AllServiceListShow from '../AllServiceListShow/AllServiceListShow';
+import loader from '../../../images/loader.gif';
 
 const AllServiceList = () => {
     const [allServiceList, setAllServiceList] = useState([])
@@ -14,8 +15,12 @@ const AllServiceList = () => {
     }, [])
     return (
         <div >
-        
-            <AllServiceListShow allServiceList={allServiceList}></AllServiceListShow>
+            
+            {
+                allServiceList.length > 0 ?
+                <AllServiceListShow allServiceList={allServiceList}></AllServiceListShow>
+                : <img src={loader} alt=""className="img-fluid" style={{margin: "auto"}} />
+            }
            
         </div>
         

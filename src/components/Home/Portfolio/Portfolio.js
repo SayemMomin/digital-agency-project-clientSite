@@ -10,6 +10,7 @@ import carousal4 from '../../../images/carousel-4.png';
 
 
 
+
 const Portfolio = () => {
   const props = useSpring({opacity: 3, from: {opacity: 0}})
     const responsive = {
@@ -36,14 +37,14 @@ const Portfolio = () => {
             <div className="d-flex justify-content-center pb-2">
                 <h4>Here are some of <span className="text-success">Our Works</span> </h4>
             </div>
-            <div className=''>
+             
             <Carousel responsive={responsive} style={props}>
-            <div><img style={{height: "200px", width: "300px"}} src={carousal1} alt=""/></div>
-            <div><img style={{height: "200px", width: "300px"}} src={carousal2} alt=""/></div>
-            <div><img style={{height: "200px", width: "300px"}} src={carousal3} alt=""/></div>
-            <animated.div style={props}><img style={{height: "200px", width: "300px"}} src={carousal4} alt=""/></animated.div>
+            <img style={{height: "200px", width: "300px"}} src={carousal1} alt=""/>
+            <img style={{height: "200px", width: "300px"}} src={carousal2} alt=""/>
+            <img style={{height: "200px", width: "300px"}} src={carousal3} alt=""/>
+            <img style={{height: "200px", width: "300px"}} src={carousal4} alt=""/>
             </Carousel>
-            </div>
+
         </section>
     );
 };

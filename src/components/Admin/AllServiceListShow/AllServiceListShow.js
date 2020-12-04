@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { UserContext } from '../../../App';
 
-const AllServiceListShow = ({allServiceList}) => {
+const AllServiceListShow = () => {
     const [status, setStatus] = useState("");
     const [loding, setLoding] = useState(false);
-    const [allServiceListStatus, setAllServiceListStatus] = useState([])
+    const [color, setColor] = useState("red");
+    const [allServiceList, setAllServiceList] = useState([])
+    useEffect(() => {
+        fetch('https://sleepy-ocean-40768.herokuapp.com/allOrderServiceList' 
+        )
+        .then(res => res.json())
+        .then(data => {
+            setAllServiceList(data)
+            console.log(data);
+        })
+    }, [])
+
     const handleChange = (event, id) => {
 
-        setAllServiceListStatus([])
+        setAllServiceList([])
 
-        fetch(`https://sleepy-ocean-40768.herokuapp.com/updateOrderStatus/${id}`, {
+        fetch(`http://localhost:9000/updateOrderStatus/${id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
@@ -49,20 +61,20 @@ const AllServiceListShow = ({allServiceList}) => {
                         <td>{serviceList.details}</td>
                         <td>
                         {
-                                allServiceListStatus.status == "On Going" ? (
-                                <select name="status" id="status" style={{ color: 'yellow',border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                serviceList.status == "On Going" ? (
+                                <select name="status" id="status" style={{ color: 'yellow',border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
                                 <option value="pending">pending</option>
                                 <option value="Done">Done</option>
                                 <option value="On Going">On Going</option>
                                 </select>
                                 ) : (
-                                    allServiceListStatus.status == "Done" ? (
-                                <select name="status" id="status" style={{color: `green`,border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                    serviceList.status == "Done" ? (
+                                <select name="status" id="status" style={{color: `green`,border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
                                 <option value="pending">pending</option>
                                 <option value="Done">Done</option>
                                 <option value="On Going">On Going</option>
                                 </select>
-                                ) : ( <select name="status" id="status" style={{ color: 'red',border:"none" }} onChange={(e) => handleChange(e, allServiceListStatus._id)} value={allServiceListStatus.status}>
+                                ) : ( <select name="status" id="status" style={{ color: 'red',border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
                                 <option value="pending">pending</option>
                                 <option value="Done">Done</option>
                                 <option value="On Going">On Going</option>

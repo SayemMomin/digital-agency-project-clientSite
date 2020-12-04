@@ -2,6 +2,7 @@ import React from 'react';
 import AllServiceList from '../AllServiceList/AllServiceList';
 import logo from '../../../images/logos/logo.png';
 import SidebarCommon from '../../SidebarCommon/SidebarCommon';
+import AllServiceListShow from '../AllServiceListShow/AllServiceListShow';
 
 
 const Admin = () => {
@@ -12,7 +13,8 @@ const Admin = () => {
                 <SidebarCommon></SidebarCommon>
             </div>
             <div className="col-md-9">
-                <AllServiceList></AllServiceList>
+                {/* <AllServiceList></AllServiceList> */}
+                <AllServiceListShow></AllServiceListShow>
             </div>
         </div>       
         </div>
