@@ -5,9 +5,10 @@ const Review = ({review}) => {
     const{data} = review
     console.log(data);
     return (
-        <div className=" d-flex justify-content-center col-md-6 col-lg-4">
-            <div className="" style={{width: '22rem'}}>
-            <div className="card m-2">
+    
+            <div className="d-flex justify-content-center col-md-6 col-lg-4  p-3">
+            <div style={{width: '22rem'}}>
+            <div className="card">
             <div className="card-body">
                 <img className="img-fluid" style={{width: '60px', borderRadius: '50%'}} src={review.photo} alt=""/>
                 <h5 className="card-title">{data.name} </h5>
@@ -17,6 +18,7 @@ const Review = ({review}) => {
             </div>
             </div>
         </div>
+  
     );
 };
 

@@ -33,10 +33,11 @@ const Portfolio = () => {
       };
    
     return (
-        <section className="m-5 text-white" style={{backgroundColor: '#111430', height: '300px'}}>
-            <div className="d-flex justify-content-center pb-2">
-                <h4>Here are some of <span className="text-success">Our Works</span> </h4>
-            </div>
+        <section className="text-white mt-5" style={{backgroundColor: '#111430', height: '300px'}}>
+          <div className="container pl-5">
+          <div className="d-flex justify-content-center pb-4">
+                <h2>Here are some of <span className="text-success">Our Works</span> </h2>
+          </div>
              
             <Carousel responsive={responsive} style={props}>
             <img style={{height: "200px", width: "300px"}} src={carousal1} alt=""/>
@@ -44,6 +45,7 @@ const Portfolio = () => {
             <img style={{height: "200px", width: "300px"}} src={carousal3} alt=""/>
             <img style={{height: "200px", width: "300px"}} src={carousal4} alt=""/>
             </Carousel>
+          </div>
 
         </section>
     );

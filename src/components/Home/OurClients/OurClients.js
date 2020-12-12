@@ -4,25 +4,26 @@ import google from '../../../images/logos/google.png';
 import netflix from '../../../images/logos/netflix.png';
 import slack from '../../../images/logos/slack.png';
 import uber from '../../../images/logos/uber.png';
+import './OurClients.css'
 const OurClients = () => {
    
     return (
-            <section className="d-flex justify-content-center col m-4">
-            <div className="d-flex justify-content-center col">
-            <img style={{width: "100px"}} className="img-fluid m-3" src={airbnb} alt=""/>
-            </div>
-            <div className="d-flex justify-content-center col">
-            <img style={{width: "100px"}} className="img-fluid m-3" src={google} alt=""/>
-            </div>
-            <div className="d-flex justify-content-center col">
-            <img style={{width: "100px"}} className="img-fluid m-3" src={netflix} alt=""/>
-            </div>
-            <div className="d-flex justify-content-center col">
-            <img style={{width: "100px"}} className="img-fluid m-3" src={slack} alt=""/>
-            </div>
-            <div className="d-flex justify-content-center col">
-            <img style={{width: "100px"}} className="img-fluid m-3" src={uber} alt=""/>
-            </div>
+            <section className="d-flex flex-column justify-content-around align-items-center flex-md-row mt-5 container">
+            
+            <img  className="clients" src={airbnb} alt=""/>
+         
+            
+            <img  className="clients" src={google} alt=""/>
+         
+            
+            <img  className="clients" src={netflix} alt=""/>
+         
+            
+            <img  className="clients" src={slack} alt=""/>
+         
+            
+            <img  className="clients" src={uber} alt=""/>
+         
         </section>
     );
 };

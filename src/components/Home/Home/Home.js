@@ -5,14 +5,16 @@ import Services from '../Services/Services';
 import Portfolio from '../Portfolio/Portfolio';
 import Reviews from '../Reviews/Reviews/Reviews';
 import Footer from '../Footer/Footer';
+import HeaderMain from '../Header/HeaderMain/HeaderMain';
 
 
 
 
 const Home = () => {
     return (
-        <div className="container">
+        <div className="">
           <Header></Header>
+ 
           <OurClients></OurClients>
           <Services></Services>
           <Portfolio></Portfolio>         

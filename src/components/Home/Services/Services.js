@@ -16,9 +16,9 @@ const Services = () => {
     }, [])
         
     return (
-        <div className=" text-center  mt-5">
-             <h4>Provided Awesome <span className="text-success">Services</span> </h4>
-            <div className="row d-flex justify-content-center">
+        <div className=" text-center mt-5 container">
+             <h2>Provided Awesome <span className="text-success">Services</span> </h2>
+            <div className="row d-flex justify-content-center mt-5">
            
             { services.length > 0 ?
                 services.map(data => <Service service={data} key={data.title}></Service>)

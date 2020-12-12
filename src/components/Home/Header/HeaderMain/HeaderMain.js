@@ -11,17 +11,19 @@ const HeaderMain = () => {
         //console.log('click')
       }
     return (
-        <header className="row d-flex justify-content-center m-2 ">
-            <section className="col-md-4">
-                <h3>Let's Grow Your <br/>Brand To The <br/> Next Level</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatibus eius atque totam mollitia obcaecati, qui exercitationem ut dolor adipisci.</p>
+        <main className="container headermain pl-4">
+            <section  className="row">
+                <div className="col-md-4 pr-0">
+                <h1>Let's Grow <br/> Your Brand To <br/> The Next Level</h1>
+                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatibus eius atque totam mollitia obcaecati, qui exercitationem ut dolor adipisci.</p>
                 <button type="button" onClick={handleClick} className="btn btn-primary my-2">Find Us</button>
-            </section>
-            <section className="col-md-6 ml-3">
-                <img className="img-fluid" src={headerImg} alt=""/>
+                </div>
+               <div className="col-md-6 ml-auto">
+               <img className="img-fluid" src={headerImg} alt=""/>
+               </div>
             </section>
             
-        </header>
+        </main>
     );
 };
 

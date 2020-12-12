@@ -14,14 +14,17 @@ const Reviews = () => {
         })
     }, [])
     return (
-        <div className=" text-center  mt-5">
-             <h4>Client's <span className="text-success">FeedBack</span> </h4>
-            <div className="row d-flex justify-content-center">
+        <section className="container text-center  mt-5">
+             <h2>Client's <span className="text-success">FeedBack</span> </h2>
+  
+            <div className="row d-flex justify-content-center mt-3">
+            
                 {
                    reviews.map(data => <Review review={data} key={data._id}></Review>) 
                 }
+                      
             </div>
-        </div>
+        </section>
     );
 };
 

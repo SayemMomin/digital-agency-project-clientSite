@@ -1,0 +1,12 @@
+img.clients {
+    width: 12rem;
+    padding: 2rem;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+img.clients:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
+    filter: brightness(10);
+    transform: scale(1.1);
+  }

@@ -1,35 +1,31 @@
 import React from 'react';
 import logo from '../../../../images/logos/logo.png';
+import './Navbar.css'
+
 
 const Navbar = () => {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-light header-bg">
-            <a className="navbar-brand" href="#"><img className="img-fluid" style={{width: '100px'}} src={logo} alt=""/></a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-                <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
-                    <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/home">Our PortFolio</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/home">Our Team</a>
-                </li>               
-                <li className="nav-item mr-2">
-                    <button className="btn btn-secondary"><a className="nav-link" href="/order">Login</a></button>
-                </li>
-                <li className="nav-item">
-                    <button className="btn btn-secondary"><a className="nav-link" href="/order">Dashboard</a></button>
-                </li>
-                </ul>
-            </div>
-            </nav>
-        </div>
+            <header className="container">
+                <nav className="navbar navbar-expand-lg navbar-light">
+                <a className="navbar-brand" href="#"><img className="" style={{width: '200px'}} src={logo} alt=""/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse " id="navbarSupportedContent">
+                    <div className="navbar-nav ml-auto justify-content-center  ">
+                  
+                        <a className="nav-link mr-5 text-dark nav-style" href="/">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link mr-5 text-dark nav-style" href="/home">Our PortFolio</a>
+                        <a className="nav-link mr-5 text-dark nav-style" href="/home">Our Team</a>
+                        <a className="nav-link mr-5 text-dark nav-style" href="/home">Contact us</a>
+                        <a className=" login-btn" href="/order">Login</a>
+                    
+                    </div>
+                </div>
+                </nav>
+              
+            </header>
+      
     );
 };
 

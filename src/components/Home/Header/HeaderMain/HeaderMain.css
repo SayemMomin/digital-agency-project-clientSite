@@ -1,18 +1,22 @@
 .header-bg{
     position:relative;
     background :#FBD062;
-    background-size: cover;
-}
-header{
-    height:435px;
+    
 }
 
-header::after{
-    height:70px;
-    content:' ';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    right: 0;
-    background: linear-gradient(to right bottom,#FBD062 50%,white 50%);
+.headermain{
+    margin-top: 45px;
+}
+.headermain h1{
+    font-size: 50px;
+}
+
+.header-bg::after{
+    content:'';
+     position:absolute;
+     top:95%;
+     right:0;
+     width: 100%;
+     height: 10%;
+     background: linear-gradient(to right bottom, #FBD062, 50%, #FFFFFF 50%);
 }
