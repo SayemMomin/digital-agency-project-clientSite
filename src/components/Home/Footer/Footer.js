@@ -6,7 +6,7 @@ const Footer = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => {
         
-        fetch('https://sleepy-ocean-40768.herokuapp.com/sendMassage', {
+        fetch('https://ancient-stream-18565.herokuapp.com/sendMassage', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
@@ -17,7 +17,8 @@ const Footer = () => {
         
       };
     return (
-        <footer className="bg-footer mt-5" styles={{height: '100px',}}>
+        <div className="bg-footer">
+        <footer className=" mt-5">
             <section className="container">
              <div className="row pt-5">
              <div className="col-md-6">
@@ -36,6 +37,7 @@ const Footer = () => {
             </section>
             <p className="text-center pt-5">Copyright@2020</p>
         </footer>
+        </div>
     );
 };
 

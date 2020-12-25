@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 const HeaderMain = () => {
     let history = useHistory();
     const handleClick = () => {
-        let path = `order`; 
+        let path = `/dashboard/order`; 
         history.push(path);
         //console.log('click')
       }

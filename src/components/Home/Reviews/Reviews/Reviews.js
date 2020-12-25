@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Review from '../Review/Review';
-import reviewsData from '../../../../FackData/ReviewsData/ReviewsData';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://sleepy-ocean-40768.herokuapp.com/reviews' 
-        )
+        fetch('https://ancient-stream-18565.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => {
             setReviews(data)

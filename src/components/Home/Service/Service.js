@@ -4,11 +4,9 @@ import { useHistory } from 'react-router-dom';
 
 
 const Service = ({service}) => {
-    const{image} = service
     const history = useHistory();
     const orderHandle = () => {
-        history.push('/order')
-    //     console.log('order click');
+        history.push(`/dashboard/order/${service.id}`)
      }
      
     return (
@@ -17,7 +15,7 @@ const Service = ({service}) => {
             <div className="card-body ">
                 {
                     service.image ? <img style={{width: "60px"}} className="img-fluid" src={`data:image/png;base64,${service.image.img}`} alt=""/> 
-                    : <img style={{width: "60px"}} className="img-fluid" src={`https://sleepy-ocean-40768.herokuapp.com/${service.img}`} alt=""/> 
+                    : <img style={{width: "60px"}} className="img-fluid" src={service.img} alt=""/> 
                 } <br/>
                 <h5 className="card-title">{service.title} </h5>
                 <p className="card-text">{service.description} </p>

@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Service from '../Service/Service';
 import loader from '../../../images/loader.gif';
+import { ServiceContext } from '../../../App';
+import { useContext } from 'react';
 
 
 const Services = () => {
-    const [services, setServices] = useState([])
-    useEffect(() => {
-        fetch('https://sleepy-ocean-40768.herokuapp.com/services' 
-        )
-        .then(res => res.json())
-        .then(data => {
-            setServices(data)
-            //console.log(data);
-        })
-    }, [])
+    const [services] = useContext(ServiceContext)
         
     return (
         <div className=" text-center mt-5 container">

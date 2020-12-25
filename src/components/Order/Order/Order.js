@@ -1,21 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import OrderForm from '../OrderForm/OrderForm';
 import SidebarCommon from '../../SidebarCommon/SidebarCommon';
 
 
 const Order = () => {
     return (
-        <div className=" mt-2">
-            <div className="row justify-content-center">
-            <div className="col-md-3">   
+        
+            <section className="container">
+           <div className="row justify-content-center">
+                <div className="col-md-3">   
                 
-            <SidebarCommon></SidebarCommon>
-            </div>
-            <div className="col-md-6">
-                <OrderForm></OrderForm>
-            </div>
-            </div>
-        </div>
+                <SidebarCommon></SidebarCommon>
+                </div>
+                <div className="col-md-9" style={{backgroundColor: "#f2f2f2"}}>
+                    <OrderForm></OrderForm>
+                </div>
+           </div>
+            </section>
+        
     );
 };
 

@@ -20,7 +20,7 @@ const AddService = () => {
     formData.append('title', info.title);
     formData.append('description', info.description);
     
-      fetch('https://sleepy-ocean-40768.herokuapp.com/addNewService', {
+      fetch('https://ancient-stream-18565.herokuapp.com/addNewService', {
         method: 'POST',
         body: formData
   })
@@ -34,25 +34,27 @@ const AddService = () => {
 };
 
     return (
-        <section className="row container d-flex justify-content-center">
-            <section className="col-sm-3">
+        <section className="container">
+          <div className="row justify-content-center">
+            <div className="col-sm-3">
                 <SidebarCommon></SidebarCommon>
-            </section>
-            <section className="col-sm-6">
+            </div>
+            <div className="col-md-9" style={{backgroundColor: "#f2f2f2"}}>
             
             <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-sm-6">             
+              <div className="col-md-6">             
               <input name="title" onBlur={handleBlur} className="form-control m-2" placeholder="Service Title" type="text" />
               <textarea name="description" onBlur={handleBlur} className="form-control m-2" placeholder="Your description" id="exampleFormControlTextarea1" style={{height: '200px'}} rows="3" ></textarea>
               <input className="form-control m-2" type="submit" value="Submit Your Review"/>           
               </div>
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <input type="file" onChange={handleFileChange} className="form-control m-2" name="file" id=""/>
               </div>
               </div>
               </form>           
-            </section>
+            </div>
+            </div>
         </section>
     );
 };

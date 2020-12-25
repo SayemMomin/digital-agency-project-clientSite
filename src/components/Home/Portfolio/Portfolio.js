@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import {useSpring, animated} from 'react-spring'
+import {useSpring} from 'react-spring'
 import carousal1 from '../../../images/carousel-1.png';
 import carousal2 from '../../../images/carousel-2.png';
 import carousal3 from '../../../images/carousel-3.png';

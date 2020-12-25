@@ -5,7 +5,7 @@ import loader from '../../../images/loader.gif';
 const AllServiceList = () => {
     const [allServiceList, setAllServiceList] = useState([])
     useEffect(() => {
-        fetch('https://sleepy-ocean-40768.herokuapp.com/allOrderServiceList' 
+        fetch('https://ancient-stream-18565.herokuapp.com/allOrderList' 
         )
         .then(res => res.json())
         .then(data => {

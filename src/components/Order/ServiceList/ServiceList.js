@@ -1,16 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import ServiceListShow from '../ServiceListShow/ServiceListShow';
-import { UserContext } from '../../../App';
+
 import SidebarCommon from '../../SidebarCommon/SidebarCommon';
+import { UserContext } from '../../../App';
 
 const ServiceList = () => {
-    const [serviceList, setServiceList] = useState([])
-    const [loggedInUser, setLoggedInUser] =useContext(UserContext)
-
-    
+    const [serviceList, setServiceList] = useState([]);
+    const [userLoggedIn] = useContext(UserContext)
 
     useEffect(() => {
-        fetch('https://sleepy-ocean-40768.herokuapp.com/myServiceList?email='+ loggedInUser.email, 
+        fetch('https://ancient-stream-18565.herokuapp.com/myServiceList?email=' + userLoggedIn.email, 
         )
         .then(res => res.json())
         .then(data => {
@@ -19,18 +18,20 @@ const ServiceList = () => {
         })
     }, [])
     return (
-        <div className="row container d-flex justify-content-center mt-2">
-            <div className="col-sm-3">
+        <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-md-3">
                 <SidebarCommon></SidebarCommon>
             </div>
-            <div className="col-sm-6">
-            <div className="row d-flex justify-content-center">
+            <div className="col-md-9" >
+            <div className="row d-flex flex-column justify-content-center bg-secondary pt-3">
             <h4>You have: {serviceList.length} Order</h4>
             {
                 serviceList.map(list => <ServiceListShow myServiceList={list} key={list._id}></ServiceListShow>)
             }
         </div>
             </div>
+        </div>
         </div>
     );
 };

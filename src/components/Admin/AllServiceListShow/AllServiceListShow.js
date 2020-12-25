@@ -1,26 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../../../App';
 
-const AllServiceListShow = () => {
+const AllServiceListShow = ({allServiceList}) => {
     const [status, setStatus] = useState("");
     const [loding, setLoding] = useState(false);
     const [color, setColor] = useState("red");
-    const [allServiceList, setAllServiceList] = useState([])
-    useEffect(() => {
-        fetch('https://sleepy-ocean-40768.herokuapp.com/allOrderServiceList' 
-        )
-        .then(res => res.json())
-        .then(data => {
-            setAllServiceList(data)
-            console.log(data);
-        })
-    }, [])
 
     const handleChange = (event, id) => {
-
-        setAllServiceList([])
-
-        fetch(`http://localhost:9000/updateOrderStatus/${id}`, {
+        fetch(`https://ancient-stream-18565.herokuapp.com/updateOrderStatus/${id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
