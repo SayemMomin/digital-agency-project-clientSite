@@ -2,8 +2,7 @@ import React from 'react';
 
 const Review = ({review}) => {
     console.log(review)
-    // const{data} = review
-    // console.log(data);
+    
     return (
     
             <div className="d-flex justify-content-center col-md-6 col-lg-4  p-3">

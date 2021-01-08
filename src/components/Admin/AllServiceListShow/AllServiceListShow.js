@@ -1,10 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { UserContext } from '../../../App';
+import React from 'react';
 
 const AllServiceListShow = ({allServiceList}) => {
-    const [status, setStatus] = useState("");
-    const [loding, setLoding] = useState(false);
-    const [color, setColor] = useState("red");
 
     const handleChange = (event, id) => {
         fetch(`https://ancient-stream-18565.herokuapp.com/updateOrderStatus/${id}`, {
@@ -14,8 +10,9 @@ const AllServiceListShow = ({allServiceList}) => {
             },
             body: JSON.stringify({ status: event.target.value })
 
-        }).then(res => {
-            setLoding(loding)
+        })
+        .then(res => {
+            window.alert("Status update successfully")
 
         })
             .catch(err => {
@@ -47,27 +44,11 @@ const AllServiceListShow = ({allServiceList}) => {
                         <td>{serviceList.project}</td>
                         <td>{serviceList.details}</td>
                         <td>
-                        {
-                                serviceList.status == "On Going" ? (
-                                <select name="status" id="status" style={{ color: 'yellow',border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
-                                <option value="pending">pending</option>
-                                <option value="Done">Done</option>
-                                <option value="On Going">On Going</option>
+                           <select className="border-0" onChange={(e) => handleChange(e, serviceList._id)} defaltValue={serviceList.status}>
+                                    <option value="Panding">Panding</option>
+                                    <option value="On going">On going</option>
+                                    <option value="Done">Done</option>
                                 </select>
-                                ) : (
-                                    serviceList.status == "Done" ? (
-                                <select name="status" id="status" style={{color: `green`,border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
-                                <option value="pending">pending</option>
-                                <option value="Done">Done</option>
-                                <option value="On Going">On Going</option>
-                                </select>
-                                ) : ( <select name="status" id="status" style={{ color: 'red',border:"none" }} onChange={(e) => handleChange(e, serviceList._id)} value={serviceList.status}>
-                                <option value="pending">pending</option>
-                                <option value="Done">Done</option>
-                                <option value="On Going">On Going</option>
-                                </select>)
-                                )
-                            }   
                         </td>
                         
                     </tr>
